@@ -19,7 +19,6 @@ HEADERS += \
     text/qfragmentmap_p.h \
     text/qtextdocument.h \
     text/qtextdocument_p.h \
-    text/qtexthtmlparser_p.h \
     text/qabstracttextdocumentlayout.h \
     text/qabstracttextdocumentlayout_p.h \
     text/qtextdocumentlayout_p.h \
@@ -56,7 +55,6 @@ SOURCES += \
     text/qfragmentmap.cpp \
     text/qtextdocument.cpp \
     text/qtextdocument_p.cpp \
-    text/qtexthtmlparser.cpp \
     text/qabstracttextdocumentlayout.cpp \
     text/qtextdocumentlayout.cpp \
     text/qtextcursor.cpp \
@@ -83,6 +81,11 @@ qtConfig(harfbuzz) {
 
     SOURCES += text/qharfbuzzng.cpp
     HEADERS += text/qharfbuzzng_p.h
+}
+
+qtConfig(texthtmlparser) {
+    HEADERS += text/qtexthtmlparser_p.h
+    SOURCES += text/qtexthtmlparser.cpp
 }
 
 qtConfig(textodfwriter) {
