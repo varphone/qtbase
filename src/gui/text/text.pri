@@ -29,7 +29,6 @@ HEADERS += \
     text/qtextimagehandler_p.h \
     text/qtexttable.h \
     text/qtextlist.h \
-    text/qtextdocumentwriter.h \
     text/qtexttable_p.h \
     text/qstatictext_p.h \
     text/qstatictext.h \
@@ -62,7 +61,6 @@ SOURCES += \
     text/qtextimagehandler.cpp \
     text/qtexttable.cpp \
     text/qtextlist.cpp \
-    text/qtextdocumentwriter.cpp \
     text/qstatictext.cpp \
     text/qrawfont.cpp \
     text/qglyphrun.cpp \
@@ -81,6 +79,11 @@ qtConfig(harfbuzz) {
 
     SOURCES += text/qharfbuzzng.cpp
     HEADERS += text/qharfbuzzng_p.h
+}
+
+qtConfig(textdocumentwriter) {
+    HEADERS += text/qtextdocumentwriter.h
+    SOURCES += text/qtextdocumentwriter.cpp
 }
 
 qtConfig(texthtmlparser) {

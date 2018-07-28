@@ -1272,6 +1272,12 @@
             "condition": "tests.xlib",
             "output": [ "privateFeature" ]
         },
+        "textdocumentwriter": {
+            "label": "DocumentWriter",
+            "purpose": "Provides an Document writer.",
+            "section": "Kernel",
+            "output": [ "publicFeature", "feature" ]
+        },
         "texthtmlparser": {
             "label": "HtmlParser",
             "purpose": "Provides a parser for HTML.",
