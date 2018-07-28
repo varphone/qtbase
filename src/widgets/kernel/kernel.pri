@@ -28,11 +28,6 @@ HEADERS += \
         kernel/qwidget_p.h \
 	kernel/qwidgetaction.h \
 	kernel/qwidgetaction_p.h \
-	kernel/qgesture.h \
-	kernel/qgesture_p.h \
-	kernel/qstandardgestures_p.h \
-	kernel/qgesturerecognizer.h \
-	kernel/qgesturemanager_p.h \
         kernel/qdesktopwidget_p.h \
         kernel/qwidgetwindow_p.h \
         kernel/qwindowcontainer_p.h
@@ -53,10 +48,6 @@ SOURCES += \
 	kernel/qtooltip.cpp \
 	kernel/qwidget.cpp \
 	kernel/qwidgetaction.cpp \
-	kernel/qgesture.cpp \
-	kernel/qstandardgestures.cpp \
-	kernel/qgesturerecognizer.cpp \
-	kernel/qgesturemanager.cpp \
         kernel/qdesktopwidget.cpp \
         kernel/qwidgetsvariant.cpp \
         kernel/qwidgetwindow.cpp \
@@ -80,4 +71,19 @@ qtConfig(formlayout) {
 qtConfig(whatsthis) {
     HEADERS += kernel/qwhatsthis.h
     SOURCES += kernel/qwhatsthis.cpp
+}
+
+qtConfig(gestures) {
+    HEADERS += \
+	kernel/qgesture.h \
+	kernel/qgesture_p.h \
+	kernel/qstandardgestures_p.h \
+	kernel/qgesturerecognizer.h \
+	kernel/qgesturemanager_p.h
+
+    SOURCES += \
+	kernel/qgesture.cpp \
+	kernel/qstandardgestures.cpp \
+	kernel/qgesturerecognizer.cpp \
+	kernel/qgesturemanager.cpp
 }
