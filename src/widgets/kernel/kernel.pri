@@ -22,7 +22,6 @@ HEADERS += \
 	kernel/qlayoutitem.h \
 	kernel/qsizepolicy.h \
         kernel/qstackedlayout.h \
-	kernel/qtooltip.h \
         kernel/qwidget.h \
         kernel/qwidget_p.h \
 	kernel/qwidgetaction.h \
@@ -43,7 +42,6 @@ SOURCES += \
 	kernel/qlayoutitem.cpp \
         kernel/qsizepolicy.cpp \
         kernel/qstackedlayout.cpp \
-	kernel/qtooltip.cpp \
 	kernel/qwidget.cpp \
 	kernel/qwidgetaction.cpp \
         kernel/qdesktopwidget.cpp \
@@ -89,4 +87,9 @@ qtConfig(gestures) {
 qtConfig(shortcut) {
     HEADERS += kernel/qshortcut.h
     SOURCES += kernel/qshortcut.cpp
+}
+
+qtConfig(tooltip) {
+    HEADERS += kernel/qtooltip.h
+    SOURCES += kernel/qtooltip.cpp
 }
