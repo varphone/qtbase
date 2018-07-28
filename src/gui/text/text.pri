@@ -30,7 +30,6 @@ HEADERS += \
     text/qtextimagehandler_p.h \
     text/qtexttable.h \
     text/qtextlist.h \
-    text/qsyntaxhighlighter.h \
     text/qtextdocumentwriter.h \
     text/qtexttable_p.h \
     text/qstatictext_p.h \
@@ -66,7 +65,6 @@ SOURCES += \
     text/qtexttable.cpp \
     text/qtextlist.cpp \
     text/qtextdocumentwriter.cpp \
-    text/qsyntaxhighlighter.cpp \
     text/qstatictext.cpp \
     text/qrawfont.cpp \
     text/qglyphrun.cpp \
@@ -102,4 +100,11 @@ qtConfig(cssparser) {
         text/qcssparser_p.h
     SOURCES += \
         text/qcssparser.cpp
+}
+
+qtConfig(syntaxhighlighter) {
+    HEADERS += \
+        text/qsyntaxhighlighter.h
+    SOURCES += \
+        text/qsyntaxhighlighter.cpp
 }

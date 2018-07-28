@@ -1472,6 +1472,13 @@
             "purpose": "Supports displaying \"What's this\" help.",
             "section": "Widget Support",
             "output": [ "publicFeature", "feature" ]
+        },
+        "syntaxhighlighter": {
+            "label": "QSyntaxHighlighter",
+            "purpose": "Supports custom syntax highlighting.",
+            "section": "Widgets",
+            "condition": "features.textedit",
+            "output": [ "publicFeature", "feature" ]
         }
     },
 

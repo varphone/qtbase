@@ -407,13 +407,6 @@
             "condition": "features.scrollarea && features.properties && features.widgettextcontrol",
             "output": [ "publicFeature", "feature" ]
         },
-        "syntaxhighlighter": {
-            "label": "QSyntaxHighlighter",
-            "purpose": "Supports custom syntax highlighting.",
-            "section": "Widgets",
-            "condition": "features.textedit",
-            "output": [ "publicFeature", "feature" ]
-        },
         "rubberband": {
             "label": "QRubberBand",
             "purpose": "Supports using rubberbands to indicate selections and boundaries.",
