@@ -1,12 +1,9 @@
 # Qt util module
 
 HEADERS += \
-        util/qsystemtrayicon.h \
-        util/qcolormap.h \
-        util/qsystemtrayicon_p.h
+        util/qcolormap.h
 
 SOURCES += \
-        util/qsystemtrayicon.cpp \
         util/qcolormap.cpp
 
 qtConfig(completer) {
@@ -49,12 +46,21 @@ qtConfig(undoview) {
     SOURCES += util/qundoview.cpp
 }
 
-win32:!winrt {
-    SOURCES += util/qsystemtrayicon_win.cpp
-} else: qtConfig(xcb) {
-    SOURCES += util/qsystemtrayicon_x11.cpp
-} else {
-    SOURCES += util/qsystemtrayicon_qpa.cpp
+qtConfig(systemtrayicon) {
+    HEADERS += \
+        util/qsystemtrayicon.h \
+        util/qsystemtrayicon_p.h
+
+    SOURCES += \
+        util/qsystemtrayicon.cpp
+
+    win32:!winrt {
+        SOURCES += util/qsystemtrayicon_win.cpp
+    } else: qtConfig(xcb) {
+        SOURCES += util/qsystemtrayicon_x11.cpp
+    } else {
+        SOURCES += util/qsystemtrayicon_qpa.cpp
+    }
 }
 
 mac {
