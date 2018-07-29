@@ -66,7 +66,6 @@ HEADERS += \
         kernel/qplatformsharedgraphicscache.h \
         kernel/qplatformdialoghelper.h \
         kernel/qplatformservices.h \
-        kernel/qplatformsystemtrayicon.h \
         kernel/qplatformsessionmanager.h \
         kernel/qpixelformat.h \
         kernel/qpaintdevicewindow.h \
@@ -123,7 +122,6 @@ SOURCES += \
         kernel/qplatformsharedgraphicscache.cpp \
         kernel/qplatformdialoghelper.cpp \
         kernel/qplatformservices.cpp \
-        kernel/qplatformsystemtrayicon.cpp \
         kernel/qplatformsessionmanager.cpp \
         kernel/qplatformmenu.cpp \
         kernel/qpixelformat.cpp \
@@ -156,4 +154,12 @@ qtConfig(clipboard) {
         kernel/qplatformclipboard.cpp \
         kernel/qclipboard.cpp
 }
+
+qtConfig(systemtrayicon) {
+    HEADERS += \
+        kernel/qplatformsystemtrayicon.h
+    SOURCES += \
+        kernel/qplatformsystemtrayicon.cpp
+}
+
 win32:HEADERS+=kernel/qwindowdefs_win.h
