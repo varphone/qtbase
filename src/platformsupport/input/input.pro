@@ -10,7 +10,9 @@ PRECOMPILED_HEADER = ../../corelib/global/qt_pch.h
 qtConfig(evdev) {
     include($$PWD/evdevmouse/evdevmouse.pri)
     include($$PWD/evdevkeyboard/evdevkeyboard.pri)
-    include($$PWD/evdevtouch/evdevtouch.pri)
+    qtConfig(evdevtouch) {
+        include($$PWD/evdevtouch/evdevtouch.pri)
+    }
     qtConfig(tabletevent) {
         include($$PWD/evdevtablet/evdevtablet.pri)
     }

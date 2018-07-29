@@ -16,6 +16,7 @@
             "egl": "boolean",
             "eglfs": "boolean",
             "evdev": "boolean",
+            "evdevtouch": "boolean",
             "fontconfig": "boolean",
             "freetype": { "type": "enum", "values": [ "no", "qt", "system" ] },
             "gbm": "boolean",
@@ -918,6 +919,13 @@
             "label": "evdev",
             "condition": "tests.evdev",
             "output": [ "privateFeature" ]
+        },
+        "evdevtouch": {
+            "label": "evdevtouch",
+            "purpose": "Supports evdev touch events.",
+            "section": "Kernel",
+            "condition": "features.evdev",
+            "output": [ "publicFeature", "feature" ]
         },
         "freetype": {
             "label": "FreeType",
