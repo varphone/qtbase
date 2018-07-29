@@ -1482,8 +1482,7 @@
         "syntaxhighlighter": {
             "label": "QSyntaxHighlighter",
             "purpose": "Supports custom syntax highlighting.",
-            "section": "Widgets",
-            "condition": "features.textedit",
+            "section": "Kernel",
             "output": [ "publicFeature", "feature" ]
         }
     },
