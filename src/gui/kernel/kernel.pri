@@ -30,7 +30,6 @@ HEADERS += \
         kernel/qplatformoffscreensurface.h \
         kernel/qplatformwindow_p.h \
         kernel/qplatformcursor.h \
-        kernel/qplatformclipboard.h \
         kernel/qplatformnativeinterface.h \
         kernel/qplatformmenu.h \
         kernel/qshapedpixmapdndwindow_p.h \
@@ -43,7 +42,6 @@ HEADERS += \
         kernel/qoffscreensurface.h \
         kernel/qplatformsurface.h \
         kernel/qsurface.h \
-        kernel/qclipboard.h \
         kernel/qcursor.h \
         kernel/qcursor_p.h \
         kernel/qdrag.h \
@@ -99,7 +97,6 @@ SOURCES += \
         kernel/qplatformwindow.cpp \
         kernel/qplatformoffscreensurface.cpp \
         kernel/qplatformcursor.cpp \
-        kernel/qplatformclipboard.cpp \
         kernel/qplatformnativeinterface.cpp \
         kernel/qsessionmanager.cpp \
         kernel/qshapedpixmapdndwindow.cpp \
@@ -110,7 +107,6 @@ SOURCES += \
         kernel/qoffscreensurface.cpp \
         kernel/qplatformsurface.cpp \
         kernel/qsurface.cpp \
-        kernel/qclipboard.cpp \
         kernel/qcursor.cpp \
         kernel/qdrag.cpp \
         kernel/qdnd.cpp \
@@ -152,4 +148,12 @@ qtConfig(opengl) {
             kernel/qopenglwindow.cpp
 }
 
+qtConfig(clipboard) {
+    HEADERS += \
+        kernel/qplatformclipboard.h \
+        kernel/qclipboard.h
+    SOURCES += \
+        kernel/qplatformclipboard.cpp \
+        kernel/qclipboard.cpp
+}
 win32:HEADERS+=kernel/qwindowdefs_win.h
