@@ -36,8 +36,6 @@ HEADERS += \
         painting/qpainterpath_p.h \
         painting/qvectorpath_p.h \
         painting/qpathclipper_p.h \
-        painting/qpdf_p.h \
-        painting/qpdfwriter.h \
         painting/qpen.h \
         painting/qpolygon.h \
         painting/qpolygonclipper_p.h \
@@ -85,8 +83,6 @@ SOURCES += \
         painting/qpainter.cpp \
         painting/qpainterpath.cpp \
         painting/qpathclipper.cpp \
-        painting/qpdf.cpp \
-        painting/qpdfwriter.cpp \
         painting/qpen.cpp \
         painting/qpolygon.cpp \
         painting/qrasterizer.cpp \
@@ -107,6 +103,15 @@ darwin {
 qtConfig(cssparser) {
     SOURCES += \
         painting/qcssutil.cpp
+}
+
+qtConfig(pdf) {
+    HEADERS += \
+        painting/qpdf_p.h \
+        painting/qpdfwriter.h
+    SOURCES += \
+        painting/qpdf.cpp \
+        painting/qpdfwriter.cpp
 }
 
 # Causes internal compiler errors with at least GCC 5.3.1:
