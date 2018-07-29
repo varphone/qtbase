@@ -30,6 +30,8 @@
             "libpng": { "type": "enum", "values": [ "no", "qt", "system" ] },
             "linuxfb": "boolean",
             "mirclient": "boolean",
+            "minimal": "boolean",
+            "offscreen": "boolean",
             "mtdev": "boolean",
             "opengl": { "type": "optionalString", "values": [ "no", "yes", "desktop", "es2", "dynamic" ] },
             "opengl-es-2": { "type": "void", "name": "opengl", "value": "es2" },
@@ -1008,6 +1010,18 @@
             "section": "Platform plugins",
             "autoDetect": false,
             "condition": "libs.mirclient",
+            "output": [ "privateFeature" ]
+        },
+        "minimal": {
+            "label": "Minimal",
+            "section": "Platform plugins",
+            "autoDetect": false,
+            "output": [ "privateFeature" ]
+        },
+        "offscreen": {
+            "label": "Offscreen",
+            "section": "Platform plugins",
+            "autoDetect": false,
             "output": [ "privateFeature" ]
         },
         "mtdev": {

@@ -3,9 +3,9 @@ QT_FOR_CONFIG += gui-private
 
 android:!android-embedded: SUBDIRS += android
 
-!android: SUBDIRS += minimal
+!android:qtConfig(minimal): SUBDIRS += minimal
 
-!android:qtConfig(freetype): SUBDIRS += offscreen
+!android:qtConfig(freetype):qtConfig(offscreen): SUBDIRS += offscreen
 
 qtConfig(xcb) {
     SUBDIRS += xcb
