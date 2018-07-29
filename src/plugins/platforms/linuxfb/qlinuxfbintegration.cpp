@@ -62,7 +62,9 @@
 #if QT_CONFIG(evdev)
 #include <QtInputSupport/private/qevdevmousemanager_p.h>
 #include <QtInputSupport/private/qevdevkeyboardmanager_p.h>
+#if QT_CONFIG(evdevtouch)
 #include <QtInputSupport/private/qevdevtouchmanager_p.h>
+#endif
 #endif
 
 #if QT_CONFIG(tslib)
@@ -168,7 +170,11 @@ void QLinuxFbIntegration::createInputHandlers()
 #if QT_CONFIG(tslib)
     if (!useTslib)
 #endif
+#if QT_CONFIG(evdevtouch)
         new QEvdevTouchManager(QLatin1String("EvdevTouch"), QString() /* spec */, this);
+#else
+        ;
+#endif
 #endif
 }
 
